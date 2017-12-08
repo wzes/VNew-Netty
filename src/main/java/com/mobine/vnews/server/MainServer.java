@@ -1,4 +1,4 @@
-package com.mobine.vnews;
+package com.mobine.vnews.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
@@ -34,8 +34,8 @@ public class MainServer {
         bootstrap.option(ChannelOption.SO_BACKLOG, 1024);
         bootstrap.group(acceptor, worker);
         bootstrap.channel(NioServerSocketChannel.class);
-        // add ServerIniterHandler
-        bootstrap.childHandler(new ServerIniterHandler());
+        // add ServerInitHandler
+        bootstrap.childHandler(new ServerInitHandler());
         try {
             Channel channel = bootstrap.bind(port).sync().channel();
             logger.info("Server start running in port:" + port);

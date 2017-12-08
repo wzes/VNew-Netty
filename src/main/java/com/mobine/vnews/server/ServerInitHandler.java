@@ -1,4 +1,4 @@
-package com.mobine.vnews;
+package com.mobine.vnews.server;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
@@ -11,7 +11,7 @@ import io.netty.handler.codec.string.StringEncoder;
  * @author Create by xuantang
  * @date on 12/8/17
  */
-public class ServerIniterHandler extends ChannelInitializer<SocketChannel> {
+public class ServerInitHandler extends ChannelInitializer<SocketChannel> {
 
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {

@@ -1,5 +1,8 @@
-package com.mobine.vnews;
+package com.mobine.vnews.server;
 
+import com.alibaba.fastjson.JSONObject;
+import com.mobine.vnews.dao.Dao;
+import com.mobine.vnews.module.Notice;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -10,6 +13,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -45,29 +49,31 @@ public class ChatServerHandler extends SimpleChannelInboundHandler<String> {
     protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
         Channel channel = ctx.channel();
         String address = channel.remoteAddress().toString();
-        // 启动则在线
+
         if (msg.length() > LOGIN_LENGTH) {
             String type = msg.substring(0, LOGIN_LENGTH);
-            String user_id = msg.substring(LOGIN_LENGTH);
+            String userId = msg.substring(LOGIN_LENGTH);
+            // login info
             if (type.equals(TAG_LOGIN)) {
-                logger.info("[user:" + user_id + "  addr:" + channel.remoteAddress() + " online]");
-                URmap.put(user_id, address);
-                /*String offline = DAO.getMessages(user_id);
-                int result = DAO.deleteMessages(user_id);
-                if(offline == null || offline.length() == 0){
-                }else{
-                    RCmap.get(address).writeAndFlush(offline);
-                }*/
-            } else {
-//                // 普通消息
-//                JSONObject jsonObject = JSONObject.fromObject(msg);
-//                Message received = (Message)JSONObject.toBean(jsonObject ,Message.class);
-//                //在线 通过用户->addr判断在线与否
-//                if(URmap.keySet().contains(received.getTo_id())){
-//                    RCmap.get(URmap.get(received.getTo_id())).writeAndFlush(msg);
-//                }
-//                DAO.addMessage(received);
-//                System.out.println("[user:" + received.getFrom_id() + " said: to " + received.getTo_id() + ": " + received.getContent() + "]");
+                logger.info("[user:" + userId + "  addr:" + channel.remoteAddress() + " online]");
+                System.out.println("[user:" + userId + "  addr:" + channel.remoteAddress() + " online]");
+                URmap.put(userId, address);
+            }
+            // notice
+            else {
+                JSONObject jsonObject = JSONObject.parseObject(msg);
+                Notice notice = jsonObject.toJavaObject(Notice.class);
+                List<String> users = Dao.getRelationUsersOnNews(notice.getNewsID());
+                // notice all relational user
+                for (String userID : users) {
+                    if (URmap.keySet().contains(userID)) {
+                        RCmap.get(URmap.get(userID)).writeAndFlush(msg);
+                    }
+                }
+                // add notice to db
+                Dao.addNotice(notice);
+                logger.info("[user:" + notice.getFromID() + " commit a notice: " + notice.getContent() + "]");
+                System.out.println("[user:" + notice.getFromID() + " commit a notice: " + notice.getContent() + "]");
             }
         }
 
@@ -83,10 +89,10 @@ public class ChatServerHandler extends SimpleChannelInboundHandler<String> {
     public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
         Channel channel = ctx.channel();
         String address = channel.remoteAddress().toString();
-        for (String user_id : URmap.keySet()){
-            if (URmap.get(user_id).equals(address)){
-                logger.info("[user:" + user_id + "  addr:" + channel.remoteAddress() + " offline]");
-                URmap.remove(user_id);
+        for (String userId : URmap.keySet()){
+            if (URmap.get(userId).equals(address)){
+                logger.info("[user:" + userId + "  addr:" + channel.remoteAddress() + " offline]");
+                URmap.remove(userId);
                 break;
             }
         }
@@ -105,7 +111,7 @@ public class ChatServerHandler extends SimpleChannelInboundHandler<String> {
     }
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        logger.info( "[" + ctx.channel().remoteAddress() + "]" + "exit the room");
+        logger.error( "[" + ctx.channel().remoteAddress() + "]" + "exit the room");
         ctx.close().sync();
     }
 
