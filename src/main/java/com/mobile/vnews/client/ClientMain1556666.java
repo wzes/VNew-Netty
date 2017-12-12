@@ -51,7 +51,10 @@ public class ClientMain1556666 {
 					Notice notice = new Notice();
 					notice.setFromID("1556666");
 					notice.setToID("1552730");
-					notice.setNewsID(1);
+					notice.setFromImage("image");
+					notice.setFromUsername("Hadoop");
+					notice.setTitle("World War Start!");
+					notice.setNewsID(2);
 					notice.setContent(input);
 					JSONObject jsonObject = (JSONObject) JSONObject.toJSON(notice);
 					channel.writeAndFlush(jsonObject.toString());

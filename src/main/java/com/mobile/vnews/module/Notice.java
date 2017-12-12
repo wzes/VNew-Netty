@@ -22,6 +22,51 @@ public class Notice {
     private String toID;
     private String content;
     private Timestamp timestamp;
+    /**
+     *  add after
+     */
+    private String title;
+    private String fromImage;
+    private String fromUsername;
+
+//    /**
+//     * Relation user for submitting
+//     */
+//    private String relationID;
+//
+//    public String getRelationID() {
+//        return relationID;
+//    }
+//
+//    public void setRelationID(String relationID) {
+//        this.relationID = relationID;
+//    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getFromImage() {
+        return fromImage;
+    }
+
+    public void setFromImage(String fromImage) {
+        this.fromImage = fromImage;
+    }
+
+    public String getFromUsername() {
+        return fromUsername;
+    }
+
+    public void setFromUsername(String fromUsername) {
+        this.fromUsername = fromUsername;
+    }
+
+    /* --------------------------------------------- */
 
     public int getID() {
         return ID;
