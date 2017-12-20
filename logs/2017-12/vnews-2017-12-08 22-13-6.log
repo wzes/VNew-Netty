@@ -1,1 +1,1 @@
-2017-12-08 22:14:13.286 [nioEventLoopGroup-3-1] INFO  com.mobine.vnews.server.ChatServerHandler - [user:1552730 commit a notice: hello]
+2017-12-08 22:14:13.286 [nioEventLoopGroup-3-1] INFO  com.mobine.vnews.server.ChatServerHandler - [user:1552730 commit a message: hello]

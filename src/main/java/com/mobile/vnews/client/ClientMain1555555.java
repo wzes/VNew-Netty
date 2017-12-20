@@ -1,7 +1,7 @@
 package com.mobile.vnews.client;
 
 import com.alibaba.fastjson.JSONObject;
-import com.mobile.vnews.module.Notice;
+import com.mobile.vnews.module.Message;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.EventLoopGroup;
@@ -48,15 +48,15 @@ public class ClientMain1555555 {
 					if ("quit".equals(input)) {
 						System.exit(1);
 					}
-					Notice notice = new Notice();
-					notice.setFromID("1555555");
-					notice.setToID("1552730");
-					notice.setFromImage("image");
-					notice.setFromUsername("Hadoop");
-					notice.setTitle("World War Start!");
-					notice.setNewsID(2);
-					notice.setContent(input);
-					JSONObject jsonObject = (JSONObject) JSONObject.toJSON(notice);
+					Message message = new Message();
+					message.setFromID("1555555");
+					message.setToID("1552730");
+					message.setFromImage("image");
+					message.setFromUsername("Hadoop");
+					message.setTitle("World War Start!");
+					message.setNewsID(2);
+					message.setContent(input);
+					JSONObject jsonObject = (JSONObject) JSONObject.toJSON(message);
 					channel.writeAndFlush(jsonObject.toString());
 				}
 			}

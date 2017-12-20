@@ -1,1 +1,1 @@
-2017-12-08 22:14:55.422 [nioEventLoopGroup-3-2] INFO  com.mobine.vnews.server.ChatServerHandler - [user:1555555 commit a notice: you ar ok]
+2017-12-08 22:14:55.422 [nioEventLoopGroup-3-2] INFO  com.mobine.vnews.server.ChatServerHandler - [user:1555555 commit a message: you ar ok]

@@ -1,7 +1,7 @@
 package com.mobile.vnews.dao;
 
+import com.mobile.vnews.module.Message;
 import com.mobile.vnews.util.PropertiesUtils;
-import com.mobile.vnews.module.Notice;
 
 import java.sql.*;
 import java.time.LocalDateTime;
@@ -49,9 +49,9 @@ public class Dao {
 
     /**
      *
-     * @param notice
+     * @param message
      */
-    public static void addNotice(Notice notice) {
+    public static void addNotice(Message message) {
         // get connection
         Connection conn = getConnection();
         /**
@@ -68,10 +68,10 @@ public class Dao {
         try {
             // insert to mysql
             preparedStatement = conn.prepareStatement(sql);
-            preparedStatement.setInt(1, notice.getNewsID());
-            preparedStatement.setString(2, notice.getFromID());
-            preparedStatement.setString(3, notice.getToID());
-            preparedStatement.setString(4, notice.getContent());
+            preparedStatement.setInt(1, message.getNewsID());
+            preparedStatement.setString(2, message.getFromID());
+            preparedStatement.setString(3, message.getToID());
+            preparedStatement.setString(4, message.getContent());
             preparedStatement.setTimestamp(5, Timestamp.valueOf(LocalDateTime.now()));
             preparedStatement.executeUpdate();
             preparedStatement.close();

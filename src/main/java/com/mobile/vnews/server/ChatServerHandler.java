@@ -2,7 +2,7 @@ package com.mobile.vnews.server;
 
 import com.alibaba.fastjson.JSONObject;
 import com.mobile.vnews.dao.Dao;
-import com.mobile.vnews.module.Notice;
+import com.mobile.vnews.module.Message;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -62,22 +62,22 @@ public class ChatServerHandler extends SimpleChannelInboundHandler<String> {
             // notice
             else {
                 JSONObject jsonObject = JSONObject.parseObject(msg);
-                Notice notice = jsonObject.toJavaObject(Notice.class);
-                List<String> users = Dao.getRelationUsersOnNews(notice.getNewsID());
+                Message message = jsonObject.toJavaObject(Message.class);
+                List<String> users = Dao.getRelationUsersOnNews(message.getNewsID());
                 // to user
-                if (URmap.keySet().contains(notice.getToID())) {
-                    RCmap.get(URmap.get(notice.getToID())).writeAndFlush(msg);
+                if (URmap.keySet().contains(message.getToID())) {
+                    RCmap.get(URmap.get(message.getToID())).writeAndFlush(msg);
                 }
-                // notice all relational user
+                // message all relational user
                 for (String userID : users) {
-                    if (URmap.keySet().contains(userID) && !userID.equals(notice.getToID())) {
+                    if (URmap.keySet().contains(userID) && !userID.equals(message.getToID())) {
                         RCmap.get(URmap.get(userID)).writeAndFlush(msg);
                     }
                 }
-                // add notice to db
-                Dao.addNotice(notice);
-                logger.info("[user:" + notice.getFromID() + " commit a notice: " + notice.getContent() + "]");
-                System.out.println("[user:" + notice.getFromID() + " commit a notice: " + notice.getContent() + "]");
+                // add message to db
+                Dao.addNotice(message);
+                logger.info("[user:" + message.getFromID() + " commit a message: " + message.getContent() + "]");
+                System.out.println("[user:" + message.getFromID() + " commit a message: " + message.getContent() + "]");
             }
         }
 

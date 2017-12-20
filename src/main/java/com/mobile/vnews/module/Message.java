@@ -6,7 +6,7 @@ import java.security.Timestamp;
  * Created by xuantang on 11/27/17.
  */
 
-public class Notice {
+public class Message {
     /**
      *  ID        INT AUTO_INCREMENT
      * PRIMARY KEY,

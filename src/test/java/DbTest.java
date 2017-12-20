@@ -1,5 +1,5 @@
 import com.mobile.vnews.dao.Dao;
-import com.mobile.vnews.module.Notice;
+import com.mobile.vnews.module.Message;
 import org.junit.Test;
 
 /**
@@ -9,11 +9,11 @@ import org.junit.Test;
 public class DbTest {
     @Test
     public void db() {
-        Notice notice = new Notice();
-        notice.setFromID("1552730");
-        notice.setToID("1555555");
-        notice.setNewsID(1);
-        notice.setContent("hello");
-        Dao.addNotice(notice);
+        Message message = new Message();
+        message.setFromID("1552730");
+        message.setToID("1555555");
+        message.setNewsID(1);
+        message.setContent("hello");
+        Dao.addNotice(message);
     }
 }
