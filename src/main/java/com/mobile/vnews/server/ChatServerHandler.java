@@ -76,6 +76,7 @@ public class ChatServerHandler extends SimpleChannelInboundHandler<String> {
                 }
                 // add message to db
                 Dao.addNotice(message);
+                Dao.addComment(message);
                 logger.info("[user:" + message.getFromID() + " commit a message: " + message.getContent() + "]");
                 System.out.println("[user:" + message.getFromID() + " commit a message: " + message.getContent() + "]");
             }

@@ -47,6 +47,30 @@ public class Dao {
     }
 
 
+    public static void addComment(Message message) {
+        // get connection
+        Connection conn = getConnection();
+        // sql
+        String sql = "insert into comment(newsID, fromID, toID, content, timestamp, floor) " +
+                "values(?, ?, ?, ?, ?, ?)";
+        PreparedStatement preparedStatement;
+        try {
+            // insert to mysql
+            preparedStatement = conn.prepareStatement(sql);
+            preparedStatement.setInt(1, message.getNewsID());
+            preparedStatement.setString(2, message.getFromID());
+            preparedStatement.setString(3, message.getToID());
+            preparedStatement.setString(4, message.getContent());
+            preparedStatement.setTimestamp(5, Timestamp.valueOf(LocalDateTime.now()));
+            preparedStatement.setInt(6, message.getFloor());
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     /**
      *
      * @param message

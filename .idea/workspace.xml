@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75046351-f208-4f2c-8f04-9ee604f5a512" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/VNews.iml" afterPath="$PROJECT_DIR$/VNews-Netty.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mobile/vnews/client/ClientMain1552730.java" afterPath="$PROJECT_DIR$/src/main/java/com/mobile/vnews/client/ClientMain1552730.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mobile/vnews/client/ClientMain1555555.java" afterPath="$PROJECT_DIR$/src/main/java/com/mobile/vnews/client/ClientMain1555555.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mobile/vnews/client/ClientMain1556666.java" afterPath="$PROJECT_DIR$/src/main/java/com/mobile/vnews/client/ClientMain1556666.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mobile/vnews/module/Message.java" afterPath="$PROJECT_DIR$/src/main/java/com/mobile/vnews/module/Message.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mobile/vnews/dao/Dao.java" afterPath="$PROJECT_DIR$/src/main/java/com/mobile/vnews/dao/Dao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/mobile/vnews/server/ChatServerHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/mobile/vnews/server/ChatServerHandler.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChatServerHandler.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ChatServerHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mobile/vnews/server/ChatServerHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="55" column="25" lean-forward="false" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+            <state relative-caret-position="440">
+              <caret line="85" column="13" lean-forward="true" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,20 +83,21 @@
       <file leaf-file-name="Dao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mobile/vnews/dao/Dao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="49" column="33" lean-forward="true" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1513760203099" expanded="true" signature="651:828" ph="(SELECT from... " />
-                <marker date="1513760203099" expanded="true" signature="652:715" ph="SELECT fromI... notice" />
-                <marker date="1513760203099" expanded="true" signature="766:827" ph="SELECT toID notice" />
-                <marker date="1513760203099" expanded="true" signature="1766:1869" ph="insert into notice... " />
+                <marker date="1513821695059" expanded="true" signature="651:828" ph="(SELECT from... " />
+                <marker date="1513821695059" expanded="true" signature="652:715" ph="SELECT fromI... notice" />
+                <marker date="1513821695059" expanded="true" signature="766:827" ph="SELECT toID notice" />
+                <marker date="1513821695059" expanded="true" signature="1466:1580" ph="insert into comment... " />
+                <marker date="1513821695059" expanded="true" signature="2793:2896" ph="insert into notice... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientMain1556666.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ClientMain1556666.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mobile/vnews/client/ClientMain1556666.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="532">
@@ -188,12 +184,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mobine/vnews/dao/Dao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mobine/vnews/client/ClientMain1556666.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mobile/vnews/dao/Dao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mobile/vnews/module/Notice.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mobile/vnews/module/Message.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mobile/vnews/client/ClientMain1552730.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mobile/vnews/client/ClientMain1555555.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mobile/vnews/client/ClientMain1556666.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mobile/vnews/dao/Dao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mobile/vnews/server/ChatServerHandler.java" />
       </list>
     </option>
   </component>
@@ -598,7 +595,7 @@
       <workItem from="1513760157582" duration="46000" />
       <workItem from="1513760262664" duration="99000" />
       <workItem from="1513760616612" duration="13000" />
-      <workItem from="1513820939817" duration="439000" />
+      <workItem from="1513820939817" duration="1397000" />
     </task>
     <servers />
   </component>
@@ -635,7 +632,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15566000" />
+    <option name="totallyTimeSpent" value="16524000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -690,10 +687,11 @@
           <caret line="40" column="40" lean-forward="false" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1513760203099" expanded="true" signature="651:828" ph="(SELECT from... " />
-            <marker date="1513760203099" expanded="true" signature="652:715" ph="SELECT fromI... notice" />
-            <marker date="1513760203099" expanded="true" signature="766:827" ph="SELECT toID notice" />
-            <marker date="1513760203099" expanded="true" signature="1766:1869" ph="insert into notice... " />
+            <marker date="1513821695059" expanded="true" signature="651:828" ph="(SELECT from... " />
+            <marker date="1513821695059" expanded="true" signature="652:715" ph="SELECT fromI... notice" />
+            <marker date="1513821695059" expanded="true" signature="766:827" ph="SELECT toID notice" />
+            <marker date="1513821695059" expanded="true" signature="1466:1580" ph="insert into comment... " />
+            <marker date="1513821695059" expanded="true" signature="2793:2896" ph="insert into notice... " />
           </folding>
         </state>
       </provider>
@@ -778,10 +776,11 @@
           <caret line="40" column="40" lean-forward="false" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1513760203099" expanded="true" signature="651:828" ph="(SELECT from... " />
-            <marker date="1513760203099" expanded="true" signature="652:715" ph="SELECT fromI... notice" />
-            <marker date="1513760203099" expanded="true" signature="766:827" ph="SELECT toID notice" />
-            <marker date="1513760203099" expanded="true" signature="1766:1869" ph="insert into notice... " />
+            <marker date="1513821695059" expanded="true" signature="651:828" ph="(SELECT from... " />
+            <marker date="1513821695059" expanded="true" signature="652:715" ph="SELECT fromI... notice" />
+            <marker date="1513821695059" expanded="true" signature="766:827" ph="SELECT toID notice" />
+            <marker date="1513821695059" expanded="true" signature="1466:1580" ph="insert into comment... " />
+            <marker date="1513821695059" expanded="true" signature="2793:2896" ph="insert into notice... " />
           </folding>
         </state>
       </provider>
@@ -866,10 +865,11 @@
           <caret line="40" column="40" lean-forward="false" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1513760203099" expanded="true" signature="651:828" ph="(SELECT from... " />
-            <marker date="1513760203099" expanded="true" signature="652:715" ph="SELECT fromI... notice" />
-            <marker date="1513760203099" expanded="true" signature="766:827" ph="SELECT toID notice" />
-            <marker date="1513760203099" expanded="true" signature="1766:1869" ph="insert into notice... " />
+            <marker date="1513821695059" expanded="true" signature="651:828" ph="(SELECT from... " />
+            <marker date="1513821695059" expanded="true" signature="652:715" ph="SELECT fromI... notice" />
+            <marker date="1513821695059" expanded="true" signature="766:827" ph="SELECT toID notice" />
+            <marker date="1513821695059" expanded="true" signature="1466:1580" ph="insert into comment... " />
+            <marker date="1513821695059" expanded="true" signature="2793:2896" ph="insert into notice... " />
           </folding>
         </state>
       </provider>
@@ -1047,20 +1047,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobile/vnews/dao/Dao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1513760203099" expanded="true" signature="651:828" ph="(SELECT from... " />
-            <marker date="1513760203099" expanded="true" signature="652:715" ph="SELECT fromI... notice" />
-            <marker date="1513760203099" expanded="true" signature="766:827" ph="SELECT toID notice" />
-            <marker date="1513760203099" expanded="true" signature="1766:1869" ph="insert into notice... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mobile/vnews/module/Message.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -1069,16 +1055,6 @@
             <element signature="e#722#723#0" expanded="true" />
             <element signature="e#761#762#0" expanded="true" />
             <element signature="e#795#796#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobile/vnews/server/ChatServerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="55" column="25" lean-forward="false" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1101,11 +1077,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobile/vnews/dao/Dao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="49" column="33" lean-forward="true" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1513821695059" expanded="true" signature="651:828" ph="(SELECT from... " />
+            <marker date="1513821695059" expanded="true" signature="652:715" ph="SELECT fromI... notice" />
+            <marker date="1513821695059" expanded="true" signature="766:827" ph="SELECT toID notice" />
+            <marker date="1513821695059" expanded="true" signature="1466:1580" ph="insert into comment... " />
+            <marker date="1513821695059" expanded="true" signature="2793:2896" ph="insert into notice... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mobile/vnews/client/ClientMain1556666.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
           <caret line="57" column="40" lean-forward="false" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mobile/vnews/server/ChatServerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="85" column="13" lean-forward="true" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
