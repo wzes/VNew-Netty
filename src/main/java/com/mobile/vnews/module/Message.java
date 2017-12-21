@@ -22,6 +22,16 @@ public class Message {
     private String toID;
     private String content;
     private Timestamp timestamp;
+
+    public int getFloor() {
+        return floor;
+    }
+
+    public void setFloor(int floor) {
+        this.floor = floor;
+    }
+
+    private int floor;
     /**
      *  add after
      */

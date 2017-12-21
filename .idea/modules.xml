@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/VNews.iml" filepath="$PROJECT_DIR$/VNews.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VNews-Netty.iml" filepath="$PROJECT_DIR$/VNews-Netty.iml" />
     </modules>
   </component>
 </project>
