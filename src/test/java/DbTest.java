@@ -12,7 +12,7 @@ public class DbTest {
         Message message = new Message();
         message.setFromID("1552730");
         message.setToID("1555555");
-        message.setNewsID(1);
+        message.setNewsID("1");
         message.setContent("hello");
         Dao.addNotice(message);
     }

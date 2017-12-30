@@ -57,12 +57,12 @@ public class Dao {
         try {
             // insert to mysql
             preparedStatement = conn.prepareStatement(sql);
-            preparedStatement.setInt(1, message.getNewsID());
+            preparedStatement.setString(1, message.getNewsID());
             preparedStatement.setString(2, message.getFromID());
             preparedStatement.setString(3, message.getToID());
             preparedStatement.setString(4, message.getContent());
             preparedStatement.setTimestamp(5, Timestamp.valueOf(LocalDateTime.now()));
-            preparedStatement.setInt(6, message.getFloor());
+            preparedStatement.setString(6, message.getFloor());
             preparedStatement.executeUpdate();
             preparedStatement.close();
             conn.close();
@@ -92,7 +92,7 @@ public class Dao {
         try {
             // insert to mysql
             preparedStatement = conn.prepareStatement(sql);
-            preparedStatement.setInt(1, message.getNewsID());
+            preparedStatement.setString(1, message.getNewsID());
             preparedStatement.setString(2, message.getFromID());
             preparedStatement.setString(3, message.getToID());
             preparedStatement.setString(4, message.getContent());

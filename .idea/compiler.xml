@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="VNews" />
+        <module name="VNews-Netty" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="VNews" target="1.8" />
+      <module name="VNews-Netty" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

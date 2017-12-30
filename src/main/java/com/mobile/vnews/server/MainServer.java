@@ -52,6 +52,6 @@ public class MainServer {
     }
 
     public static void main(String[] args) {
-        new MainServer(9999).run();
+        new MainServer(10001).run();
     }
 }

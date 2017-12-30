@@ -63,7 +63,7 @@ public class ChatServerHandler extends SimpleChannelInboundHandler<String> {
             else {
                 JSONObject jsonObject = JSONObject.parseObject(msg);
                 Message message = jsonObject.toJavaObject(Message.class);
-                List<String> users = Dao.getRelationUsersOnNews(message.getNewsID());
+                List<String> users = Dao.getRelationUsersOnNews(Integer.parseInt(message.getNewsID()));
                 // to user
                 if (URmap.keySet().contains(message.getToID())) {
                     RCmap.get(URmap.get(message.getToID())).writeAndFlush(msg);

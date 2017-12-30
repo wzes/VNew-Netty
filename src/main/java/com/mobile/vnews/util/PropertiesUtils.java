@@ -14,6 +14,9 @@ import java.util.Properties;
  * @date on 12/8/17
  */
 public class PropertiesUtils {
+    public static void main(String[] args) {
+        System.out.println(System.currentTimeMillis());
+    }
     public static String getValue(String key){
         Properties prop = new Properties();
         FileInputStream in = null;
