@@ -61,7 +61,7 @@ public class Dao {
             preparedStatement.setString(2, message.getFromID());
             preparedStatement.setString(3, message.getToID());
             preparedStatement.setString(4, message.getContent());
-            preparedStatement.setTimestamp(5, Timestamp.valueOf(LocalDateTime.now()));
+            preparedStatement.setLong(5, System.currentTimeMillis());
             preparedStatement.setString(6, message.getFloor());
             preparedStatement.executeUpdate();
             preparedStatement.close();
@@ -96,7 +96,7 @@ public class Dao {
             preparedStatement.setString(2, message.getFromID());
             preparedStatement.setString(3, message.getToID());
             preparedStatement.setString(4, message.getContent());
-            preparedStatement.setTimestamp(5, Timestamp.valueOf(LocalDateTime.now()));
+            preparedStatement.setLong(5, System.currentTimeMillis());
             preparedStatement.executeUpdate();
             preparedStatement.close();
             conn.close();

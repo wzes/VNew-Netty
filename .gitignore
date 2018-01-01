@@ -1,2 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
 /src/main/resources/db.properties
+/out/
+.idea/artifacts/
+out/
+src/main/java/META-INF/
+target/generated-sources/
+target/generated-test-sources/

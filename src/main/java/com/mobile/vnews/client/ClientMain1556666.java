@@ -27,7 +27,7 @@ public class ClientMain1556666 {
 	}
 
 	public static void main(String[] args) throws IOException {
-		new ClientMain1556666(HOST, 9999).run();
+		new ClientMain1556666(HOST, 10001).run();
 	}
 
 	public void run() throws IOException {
@@ -39,7 +39,7 @@ public class ClientMain1556666 {
 
 		try {
 			Channel channel = bootstrap.connect(host, port).sync().channel();
-			channel.writeAndFlush("login1556666");
+			channel.writeAndFlush("login0803b4a5c467431fa966");
 			while (true) {
 				BufferedReader reader = new BufferedReader(
 						new InputStreamReader(System.in));
@@ -49,10 +49,10 @@ public class ClientMain1556666 {
 						System.exit(1);
 					}
 					Message message = new Message();
-					message.setFromID("1556666");
-					message.setToID("1552730");
+					message.setFromID("0803b4a5c467431fa966");
+					message.setToID("013cc199af6c4d56b9d9");
 					message.setFromImage("image");
-					message.setFromUsername("Hadoop");
+					message.setFromUsername("Flink");
 					message.setTitle("World War Start!");
 					message.setNewsID("2");
 					message.setFloor("3");
