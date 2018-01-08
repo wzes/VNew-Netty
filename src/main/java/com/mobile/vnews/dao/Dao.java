@@ -111,10 +111,10 @@ public class Dao {
      */
     private static Connection getConnection() {
         Connection conn = null;
-        String driver = PropertiesUtils.getValue("driver");
-        String url = PropertiesUtils.getValue("url");
-        String username = PropertiesUtils.getValue("username");
-        String password = PropertiesUtils.getValue("password");
+        String driver = "com.mysql.jdbc.Driver";
+        String url = "jdbc:mysql://118.89.111.157:3306/vnews?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true";
+        String username = "vnews";
+        String password = "vnews";
         try {
             Class.forName(driver);
             conn = DriverManager.getConnection(url, username, password);
